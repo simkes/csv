@@ -41,8 +41,7 @@ namespace csv_interpreter {
 
         /*
         calculates Cell values into calculatedValue field using formulas
-        calls get_value() (private)
-        throws DivisionByZero error
+        calls calc() (private)
         */
         void compute();
 
@@ -89,6 +88,7 @@ namespace csv_interpreter {
          returns value of mTable[i][j]
          if it is not calculated goes in recursion
          throws IncorrectFormula if cells refer to each other in a loop
+         throws DivisionByZero error
          */
         int calc(int i, int j, std::vector<std::vector<bool>> &marked);
 
