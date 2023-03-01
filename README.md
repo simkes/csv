@@ -8,6 +8,7 @@
 - В ячейках CSV-файла могут хранится или целые числа или выражения вида
 
     = ARG1 OP ARG2
+    
     где ARG1 и ARG2 – целые числа или адреса ячеек в формате Имя\_колонки Номер\_строки, а OP – арифметическая операция из списка: +, -, *, /. 
 
 ## Примечания
@@ -33,3 +34,9 @@ clang++ main.cpp Csv.cpp -std=c++17 -o csvreader
 Список тестов - tests.txt
 
 Тесты и их решения - test-data/test-name.csv и test-data/test-name.sol
+
+Под Linux можно запустить скрипт run-test-data.sh, проверяющий работу программы на всех тестах из tests.txt
+
+```sh
+./run-test-data.sh csvreader
+```
